@@ -4,13 +4,15 @@ import(
 	"github.com/gin-gonic/gin"
 )
 
-var (
+var(
 	router = gin.Default()
 )
 
 func StartApplication(){
-
 	mapUrls()
-	router.Run()
+	router.GET("/ping", func(c *gin.Context){
+		c.JSON(200, gin.H{"Message" : "Pong",})
+	})
 
+	router.Run()
 }
