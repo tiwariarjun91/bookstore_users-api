@@ -10,9 +10,7 @@ var(
 
 func StartApplication(){
 	mapUrls()
-	router.GET("/ping", func(c *gin.Context){
-		c.JSON(200, gin.H{"Message" : "Pong",})
-	})
+	
 
-	router.Run()
+	router.Run(":8080")
 }
