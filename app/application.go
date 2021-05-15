@@ -5,7 +5,7 @@ import(
 )
 
 var(
-	router = gin.Default()
+	router = gin.Default() //router is a pointer to the Engine that already has logger and recovery middleware
 )
 
 func StartApplication(){
